@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer sitio web</title>
+    <link rel="shortcut icon" href="joan.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#contenido">Contenido</a>
+            <a href="#footter">Nosotros</a>
+            <script src="video.js"></script>
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+        
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            </script>
+            
+        </nav>
+   
+    <section class="textos-header">
+        <h1>Bienvenido a mi sitio web</h1>
+        <h2>Johan Camilo Sierra</h2>
+    </section>
+    <div class="ola" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C297.68,296.55 196.66,-171.19 512.69,73.53 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFF;"></path>
+        </svg></div>
+    </header>
+    <main>
+        <section id="contenido" class="contenedor sobre-nosotros">
+            <h2 class="titulo">SHAKIRA ISABEL MEBARAK RIPOLL</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="imagen1.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Un poco sobre ella.</h3>
+                    <p>Shakira es una cantante, compositora y bailarina colombiana conocida por su estilo único de música que combina elementos de pop, rock, 
+                        rumba, merengue y balada. Es reconocida por su habilidad vocal y su gran capacidad para componer canciones que hablan sobre amor,
+                         desamor, empoderamiento femenino y problemas sociales. Ha vendido más de 60 millones de copias en todo el mundo y ha ganado 
+                         numerosos premios, incluyendo dos premios Grammy y ocho premios Grammy Latino.</p>
+                    <h3><span>2</span>Lo que ha hecho.</h3>
+                    <p>Shakira es también conocida por su trabajo filantrópico y su compromiso con causas sociales. En 2003, fundó la Fundación Pies 
+                        Descalzos, que tiene como objetivo proporcionar educación y oportunidades de desarrollo a niños y jóvenes en Colombia. La fundación ha 
+                        construido escuelas y programas educativos en áreas afectadas por la pobreza y la violencia. Además, Shakira también ha sido embajadora de
+                         buena voluntad de UNICEF desde 2003, trabajando en proyectos para mejorar la educación y la nutrición 
+                         de los niños en todo el mundo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        <section class="contenido-video">
+            <video id="video" poster="poster.png" width="640" height="480" controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </section>
+        <div id="footer" class="floating-btn">
+            <a href="#">
+                <i class="fas fa-angle-double-up"></i>
+             </a>
+        </div>
+        <script src="botonflotante.js"></script>
+    <footer>
+        <div id="footter" class="contenedor-footer">
+            <div class="content-foo">
+                <h4><i class="fa fa-phone"></i> Celular</h4>
+                <p>3202645449</p>
+            </div>
+            <div class="content-foo">
+                <h4><i class="fa fa-envelope"></i> Email</h4>
+                <p>jsierr33@ibero.edu.co</p>
+            </div>
+            <div class="content-foo">
+                <h4><i class="fas fa-map-marker-alt"></i> Ubicación</h4>
+                <p>Vélez - Santander</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Electromadesi.com | Johan Camilo Sierra</h2>
+    </footer>
+</body>
+</html>
